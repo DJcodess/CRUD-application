@@ -69,8 +69,12 @@ public class StudentService {
 					student.setEmail(studentEmail);;
 				}
 			}
+			if(appointmentDate.length()>0 && appointmentDate!=null) {
 			student.setAppointmentdate(appointmentDate);
+			}
+            if(appointmentTime.length()>0 && appointmentTime!=null) {
 			student.setAppointmenttime(appointmentTime);
+            }
 		}
 		else {
 			throw new IllegalStateException("Not Found Student");

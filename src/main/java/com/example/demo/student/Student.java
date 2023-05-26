@@ -40,6 +40,16 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	public Student(String name, LocalDate dob, String email, String appointmentdate, String appointmenttime) {
+		super();
+		this.name = name;
+		this.dob = dob;
+		this.email = email;
+		this.appointmentdate = appointmentdate;
+		this.appointmenttime = appointmenttime;
+	}
+
 	public Student(String name, int age, LocalDate dob, String email, String appointmentdate, String appointmenttime) {
 		super();
 		this.name = name;
@@ -49,6 +59,7 @@ public class Student {
 		this.appointmentdate = appointmentdate;
 		this.appointmenttime = appointmenttime;
 	}
+
 	public Student(long id, String name, String appointmentdate, String appointmenttime, int age, LocalDate dob,
 			String email) {
 		super();
