@@ -52,9 +52,14 @@ public class StudentService {
 	@Transactional
 	public void updateStudent(Long studentId, String studentName, String studentEmail, String appointmentDate, String appointmentTime) {
 		// TODO Auto-generated method stub
+		
 		Optional<Student> opStudent = studentRepo.findById(studentId);
+		
 		if(opStudent.isPresent()) {
 			Student student=opStudent.get();
+			System.out.println(opStudent);
+			System.out.println("Student name: ");
+			System.out.println(studentName);
 			if(studentName!=null && studentName.length()>0) {
 				student.setName(studentName);
 				System.out.println("name is changing");
@@ -69,10 +74,10 @@ public class StudentService {
 					student.setEmail(studentEmail);;
 				}
 			}
-			if(appointmentDate.length()>0 && appointmentDate!=null) {
+			if( appointmentDate!=null && appointmentDate.length()>0) {
 			student.setAppointmentdate(appointmentDate);
 			}
-            if(appointmentTime.length()>0 && appointmentTime!=null) {
+            if(appointmentTime!=null && appointmentTime.length()>0) {
 			student.setAppointmenttime(appointmentTime);
             }
 		}
